@@ -1,0 +1,23 @@
+using namespace std;
+void myFunction(float Erate,float Jrate,float Yrate,float Crate,float* Euro,float* Jamacian,float* Yuan,float* Canadian) {
+  float x;
+  cout << "Please Enter A Amount of Currency \n";
+  cin >> x;
+  cout << "You entered: \n" << x << endl;
+  *Euro=x / Erate;
+  *Jamacian=x / Jrate;
+  *Yuan=x / Yrate;
+  *Canadian=x / Crate;
+}
+int main()
+{
+  float Euro, Jamacian, Yuan, Canadian;
+  float Erate=1.07, Jrate=0.0066, Yrate=0.15, Crate=0.74;
+  //cout << " \nPlease Enter the Currency you want to Convert yours to \n";
+  myFunction(Erate,Jrate,Yrate,Crate,&Euro,&Jamacian,&Yuan,&Canadian);
+  cout << "\nThis is your currency in Euros: "<< Euro <<" at "<< Erate <<" rate";
+  cout << "\nThis is your curency in  Jamacian Dollars: "<< Jamacian <<" at "<< Jrate <<" rate";
+  cout <<"\nThis is your currency in Yuans: "<< Yuan <<" at "<< Yrate <<" rate";
+  cout <<"\nThis is your currency in Canadian Dollars: "<< Canadian <<" at "<< Crate <<" rate";
+  return 0;
+}
